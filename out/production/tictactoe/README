@@ -1,0 +1,16 @@
+Restful API design ideas
+
+I would first use a combination of spring framework and swagger for documentation to implement Restful.
+
+API would allow for several GET requests such as:
+    - get player
+    - get board to print the board
+    - get score if you want to keep track of scores of how many times each player won
+ API would allow for the following POST requests such as:
+    - set player if the user would like to change the character the user wants to use and update the board
+    - set board to start/restart at a specific point in the game. Would need to refactor the game class to hold states of the board
+    - set size of the board where one is able to create a game board larger than 3 squares. Would need to refactor the board class
+        to accept parameters in the constructor. The request will set the board size class variable in the Game class and will construct
+        a board with that size.
+
+These will be exposed through getter and setters for the class variables in the Game class.
